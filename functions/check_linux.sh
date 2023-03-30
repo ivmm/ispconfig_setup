@@ -172,7 +172,7 @@ CheckLinux() {
 			DISTRO=ubuntu-18.04
 		fi
 
-	elif echo "$ID" | grep -iq "centos"; then
+	elif echo "$ID" | grep -iqE "(centos|almalinux|rockylinux|rhel|oraclelinux|openanolis)"; then
 
 		#---------------------------------------------------------------------
 		#	CentOS
