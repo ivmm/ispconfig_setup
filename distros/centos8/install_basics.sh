@@ -9,7 +9,7 @@ InstallBasics() {
   echo -e "[${green}DONE${NC}]\n"
 
   echo -n "Installing basic packages... "
-  yum_install nano wget net-tools NetworkManager-tui selinux-policy deltarpm epel-release which
+  yum_install nano wget net-tools NetworkManager-tui selinux-policy epel-release which
   rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
   echo -e "[${green}DONE${NC}]\n"
   
