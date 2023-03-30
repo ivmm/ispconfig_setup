@@ -178,8 +178,8 @@ CheckLinux() {
 		#	CentOS
 		#---------------------------------------------------------------------
 
-		if echo "$VERSION_ID" | grep -iq "7"; then
-			DISTRO=centos7
+		if echo "$VERSION_ID" | grep -iq "8"; then
+			DISTRO=centos8
 		fi
 
 	elif echo "$ID" | grep -iq "opensuse"; then

@@ -1,4 +1,4 @@
-#---------------------------------------------------------------------
+z#---------------------------------------------------------------------
 # Function: InstallMTA
 #    Install chosen MTA. Courier or Dovecot
 #---------------------------------------------------------------------
@@ -16,6 +16,7 @@ InstallMTA() {
 	  yum_install dovecot dovecot-mysql dovecot-pigeonhole
 	  touch /etc/dovecot/dovecot-sql.conf
 	  ln -s /etc/dovecot/dovecot-sql.conf /etc/dovecot-sql.conf
+	  ln -s /etc/dovecot/dovecot.conf /etc/dovecot.conf
 	  systemctl enable dovecot
       systemctl start dovecot
 	  echo -e "[${green}DONE${NC}]\n"

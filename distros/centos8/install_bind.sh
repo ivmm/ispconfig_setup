@@ -5,7 +5,8 @@
 InstallBind() {
   echo -n "Installing DNS server (Bind)... ";
   yum_install bind bind-utils haveged
-  cp /etc/named.conf /etc/named.conf_bak
+  mv /etc/named.conf /etc/named.conf_bak
+  touch /etc/named.conf
   echo "options {" > /etc/named.conf
   echo "      listen-on port 53 { any; };" >> /etc/named.conf
   echo "      listen-on-v6 port 53 { any; };" >> /etc/named.conf
