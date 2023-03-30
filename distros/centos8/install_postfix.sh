@@ -8,7 +8,7 @@ InstallPostfix() {
   systemctl disable sendmail.service
   echo -e "[${green}DONE${NC}]\n"
   echo -n "Installing SMTP Mail server (Postfix)... "
-  yum_install postfix postfix-mysql ntp getmail
+  yum_install postfix postfix-mysql getmail
   mv /etc/postfix/master.cf /etc/postfix/master.cf_bak
   mv ./config/master.cf /etc/postfix/master.cf
   #Fix for mailman virtualtable - need also without mailman

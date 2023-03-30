@@ -10,7 +10,6 @@ InstallBasics() {
 
   echo -n "Installing basic packages... "
   yum_install nano wget net-tools NetworkManager-tui selinux-policy epel-release which
-  rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
   echo -e "[${green}DONE${NC}]\n"
   
   echo -n "Enable Remi's RPM repository... "
@@ -22,6 +21,7 @@ InstallBasics() {
   echo -n "Enable LLStack ISPConfig repository... "
   sudo curl -o /etc/yum.repos.d/llstack-ISPconfig-Setup-centos-stream-8.repo https://copr.fedorainfracloud.org/coprs/llstack/ISPconfig-Setup/repo/centos-stream-8/llstack-ISPconfig-Setup-centos-stream-8.repo
   yum config-manager --enable llstack-ISPconfig-Setup-centos-stream-8
+  rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
   echo -e "[${green}DONE${NC}]\n"
 
   echo -n "Disabling Firewall... "

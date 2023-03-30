@@ -11,7 +11,8 @@ InstallWebServer() {
     yum_install httpd
 	echo -e "[${green}DONE${NC}]\n"
 	echo -n "Installing PHP and modules... "
-	yum_install mod_ssl mod_suphp php php-mysql php-mbstring
+	yum module enable php:remi-7.4 
+	yum_install mod_ssl mod_suphp
 	yum_install php74-php-devel php74-php-cli php74-php-bcmath php74-php-gd php74-php-json php74-php-mbstring php74-php-mcrypt php74-php-mysqlnd php74-php-opcache php74-php-pdo php74-php-pecl-crypto php74-php-pecl-mcrypt php74-php-pecl-zip php74-php-recode php74-php-snmp php74-php-soap php74-php-xml
 	echo -n "Installing needed programs for PHP and Apache... "
 	yum_install curl curl-devel perl-libwww-perl ImageMagick libxml2 libxml2-devel mod_fcgid php-cli httpd-devel php-fpm wget
