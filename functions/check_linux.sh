@@ -34,7 +34,7 @@ function apt_remove {
 }
 
 function yum_install {
-	hide_output yum -y install "$@"
+	yum -y install "$@"
 }
 
 function yum_remove {
